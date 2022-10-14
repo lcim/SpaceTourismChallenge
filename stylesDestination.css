@@ -1,0 +1,449 @@
+/*
+<img src="./assets/destination/background-destination-mobile.jpg"
+    srcset="./assets/destination/background-destination-mobile.jpg 375w, ./assets/destination/background-destination-tablet.jpg 768w, ./assets/destination/background-destination-desktop.jpg 1440w"
+    sizes="100vw" alt="Background Image">
+*/
+/* for the webpage HOME
+Mobile First*/
+
+html {
+    min-height: 100vh;
+    background-image: url("./assets/destination/background-destination-mobile.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    /* On a single command:
+    Summary: background: url("./assets/home/background-home-mobile1.jpg") center center cover no-repeat fixed;
+    */
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The entire navbar row which includes the icon and hr element  */
+.navbar-destination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /*background-color: aqua;*/
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 1rem;
+}
+
+/* Box for horizontal line and personal ref icon */
+.navbar-destination-iconAndLine {
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2em;
+}
+
+/* Personal reference icon */
+.navbar-destination-icon {
+    background-color: #FFF9B0;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.3rem;
+    left: 1rem;
+    height: 3rem;
+    z-index: 3;
+}
+
+/* Horizontal line in navbar row */
+.navbar-destination-line {
+    display: none;
+    align-self: center;
+    min-width: 30%;
+    border-right: 5px solid orange;
+    border-bottom: 01px solid rgba(24, 39, 71, 0.7);
+    border-top: 1px solid rgba(24, 39, 71, 0.7);
+    border-left: 0;
+}
+
+/* Navigator clickable button */
+.toggle-destination-icon {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    display: block;
+    color: #FFF9B0;
+    z-index: 3;
+}
+
+/* Container for destination ul */
+.navbar-destination-links {
+    display: none;
+    /*  flex  */
+    justify-content: center;
+    background-image: linear-gradient(0.25turn, rgba(41, 52, 98, 0.5) 20%, rgba(125, 90, 80, 0.5) 50%, 63%, rgba(33, 50, 94, 0.5) 80%);
+    position: sticky;
+    top: 30%;
+    border-radius: 24%;
+    margin-top: 4.5rem;
+}
+
+/* Navbar ul for destination */
+.navbar-destination-links ul {
+    width: 100%;
+    background-color: none;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.navbar-destination-links li {
+    list-style: none;
+}
+
+/* Navbar anchor tags for destination menu */
+.navbar-destination-links ul li a {
+    border-radius: 0;
+    display: inline-block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: #FFF9B0;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.2em;
+    min-width: 8rem; 
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.navbar-destination-links ul li a:hover {
+    border-bottom: 6px solid #344CB7;
+    border-top: 6px solid #344CB7;
+    border-bottom-right-radius: 33%;
+    border-top-right-radius: 33%;
+    /*
+    border-bottom-left-radius: 33%;
+    border-top-left-radius: 33%;*/
+    text-align: center;
+}
+
+.toggle-destination-icon .fa:active {
+    color: #344CB7;
+}
+
+/* ################## 
+Active navbar links*/
+.navbar-destination-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* mark main menu active */
+.navbar-destination-links a.selected { 
+  border-bottom: 9px solid #FFFFFF;
+  border-bottom-right-radius: 12%;
+  border-bottom-left-radius: 12%;
+}
+
+
+
+/* Web content section - MAIN BODY SECTION */
+.container-destination {
+    margin: 8rem 2rem 2rem 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Destination heading - Pick your destination */
+.container-destination h3:first-child {
+    color: #afb2b3;
+    align-self: center;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+/* Destination personel image */
+.container-destination img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Individual Destination links */
+.container-destination .destination-links {
+    display: flex;
+    column-gap: 0.5rem;
+    flex-flow: row wrap;
+    /*Important for responsiveness along horizontal axis*/
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding-left: 0;
+}
+
+.container-destination .destination-links ul {
+    display: flex;
+}
+
+.container-destination .destination-links li {
+    list-style: none;
+}
+
+.container-destination .destination-links li a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 2rem 0.1rem;
+    color: silver;
+    min-width: 4rem;
+    border-top-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    background-color: rgba(54, 21, 0, 0.65); 
+    transform: rotate(45deg);
+}
+
+.container-destination .destination-links li a:hover {
+    background-color: #3f4042;
+}
+
+.container-destination .destination-links li a.active-destination {
+    border-bottom: 9px solid goldenrod;
+    color: gold;
+}
+
+/* destination individual designations */
+.container-destination h3:nth-child(2) {
+    color: rgba(150, 140, 131, 0.4);
+    text-transform: uppercase;
+    font-family: "arial narrow"
+}
+
+/* destination members */
+.container-destination h2 {
+    color: rgb(150, 140, 131);
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* destination members' description */
+.container-destination article {
+    color: rgb(200, 190, 181);
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    /*grid-template-rows: repeat(3, 1fr);*/
+    grid-template-areas:
+        "liner"
+        "heads"
+        "value";
+    color: rgba(150, 140, 131, 0.5);
+    margin: auto 2rem;
+    text-align: center;
+}
+
+hr {
+    grid-area: liner;
+    color: rgba(150, 140, 131, 0.8);
+    width: 100%;
+}
+
+.footer-heading {
+    grid-area: heads;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.3rem;
+    color: rgba(150, 140, 131, 0.8);
+}
+
+.footer-value {
+    grid-area: value;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 2rem;
+}
+
+/*  ######### STYLING TABLET DEVICES ######### */
+
+@media screen and (min-width: 480px) {
+    html {
+        height: 100vh;
+        background: url("./assets/destination/background-destination-tablet.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        -webkit-bacround-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .navbar-destination {
+        position: sticky;
+        background-color: none;
+        justify-content: space-between;
+        margin-top: 0.4rem; 
+    }
+
+    /* Box for horizontal line and personal ref icon */
+    .navbar-destination-iconAndLine {
+        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 1rem;
+    }
+
+    .toggle-destination-icon {
+        display: none;
+    }
+
+    /* Personal reference icon */
+    .navbar-destination-icon {
+        position: static;
+        top: 0;
+        left: 0;
+        height: unset;
+    }
+
+    .navbar-destination-links {
+        display: flex;
+        border-radius: 0;
+        position: static;
+        margin-top: unset; 
+    }
+
+    .navbar-destination-links ul {
+        flex-flow: row wrap;
+        column-gap: 1rem;
+        /*padding: auto 3rem auto 3rem;*/
+    }
+
+    .navbar-destination-links ul li a {
+        min-width: 4rem;
+        font-size: 1.1rem;
+        /*transform: skewY(20deg);*/
+        /*padding: 3rem 0.8rem;*/
+    }
+
+    .container-destination .destination-links li a {
+        padding: 2rem 1rem;
+        font-size: 1.2rem; background-color: #222;
+    }
+}
+
+/* Styling Desktop */
+@media screen and (min-width: 769px) {
+    html {
+        background-image: url("./assets/destination/background-destination-desktop.jpg");
+    }
+
+    .navbar-destination {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-flow: row wrap;
+    }
+
+    .navbar-destination-iconAndLine {
+        margin-right: -2rem;
+        z-index: 4;
+        column-gap: 2em;
+        max-width: 40vw;
+        /*
+        flex-flow: row wrap;
+        */
+    }
+
+    .navbar-destination-line {
+        display: block;
+        min-width: 12vw;
+        /* */
+    }
+
+    .navbar-destination-links {
+        margin-left: -6.5rem;
+        padding-right: 6rem;
+        /*
+        flex-flow: row wrap; */
+    }
+
+    .navbar-destination-links ul {
+        padding-left: 1rem; 
+        /*
+        padding-right: 6rem;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(48px, 1fr)); */
+    }
+    .container-destination .destination-links li a {
+        padding: 2rem 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .container-destination {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "intro ."
+            "solar-img details"
+            "solar-img footer";
+        grid-column-gap: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    .container-destination .details {
+        grid-area: details; 
+        text-align: left;
+    }
+   .container-destination .destination-links{
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+   }
+   
+
+    .container-destination h2 {
+        grid-area: intro;
+        text-align: left;
+    }
+
+    .container-destination h3 {
+        grid-area: intro;
+    }
+
+    .container-destination img {
+        grid-area: solar-img;
+    }
+
+    .container-destination article {
+        color: rgb(200, 190, 181);
+        text-align: left;
+    }
+
+    footer {
+        grid-area: footer;
+        margin-top: 3rem;
+    }
+    hr {
+        width: 100%; 
+    }
+}
