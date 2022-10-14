@@ -202,10 +202,11 @@ Active navbar links*/
 }
 
 /* Crew individual designations */
-.container-crew h3:nth-of-type(2) {
+.container-crew .details h3 {
     color: rgba(150, 140, 131, 0.4);
     text-transform: uppercase;
-    font-family: "arial narrow"
+    font-family: "arial narrow";
+    text-align: center;
 }
 
 /* Crew members */
@@ -213,6 +214,7 @@ Active navbar links*/
     color: rgb(150, 140, 131);
     text-transform: uppercase;
     margin-top: -0.5rem;
+    text-align: center;
 }
 
 /* Crew members' description */
