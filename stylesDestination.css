@@ -266,6 +266,7 @@ hr {
     grid-area: liner;
     color: rgba(150, 140, 131, 0.8);
     width: 100%;
+    margin-top: 3rem;
 }
 
 .footer-heading {
