@@ -36,6 +36,27 @@ body {
     top: 0;
 }
 
+/* Toggle decorative icon to reveal personal info */
+.personal {
+    display: none;
+}
+.personal.personal-active {
+    position: sticky;
+    top: 3.5rem;
+    margin-left: 5%;
+    display: inline-block;
+    padding: 3rem ;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    z-index: 21;
+    background-color: #C98474; /*
+    display: none; */
+}
+.personal:hover {
+    background-color: aliceblue;
+}
+
 /* Box for horizontal line and personal ref icon */
 .navbar-crew-iconAndLine {
     /*grid-area: 1 / 1 / 2 / 3; */
@@ -203,7 +224,7 @@ Active navbar links*/
 
 /* Crew individual designations */
 .container-crew .details h3 {
-    color: rgba(150, 140, 131, 0.4);
+    color: rgba(191, 181, 173, 0.5);
     text-transform: uppercase;
     font-family: "arial narrow";
     text-align: center;
