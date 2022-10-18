@@ -30,7 +30,7 @@ let highlighted = true;
 decorImg.addEventListener("click", () => {
   highlighted = !highlighted;
   if (highlighted) {
-    decorImg.src = "assets/star64px.png";
+    decorImg.src = "./assets/star-blue3.png";
   } else {
     decorImg.src = "assets/star-canceller-orange.png";
   }
