@@ -20,6 +20,26 @@ icon.addEventListener("click", () => {
 })
 
 
+/* toggle decorative image */
+
+const decorImg = document.querySelector('.navbar-technology-icon');
+//console.log(decorImg)
+const personalClass = document.querySelector(".personal");
+//console.log(personalClass)
+let highlighted = true;
+decorImg.addEventListener("click", () => {
+  highlighted = !highlighted;
+  if (highlighted) {
+    decorImg.src = "assets/star64px.png";
+  } else {
+    decorImg.src = "assets/star-canceller-orange.png";
+  }
+})
+decorImg.addEventListener("click", () => {
+  personalClass.classList.toggle("personal-active");
+})
+
+
 /*  Removing the numbering of menu items for tablet devices */
 
 function modifyMenuItemsTechnology(x) {
