@@ -68,7 +68,12 @@ checkDeviceWidth.addEventListener("click", modifyMenuItems(checkDeviceWidth)); /
 
 const menuIconPath = window.location.pathname;
 const menuIcons = document.querySelectorAll(".navbar a").forEach(link => {
-  if (link.href.includes(`${menuIconPath}`)) {
+  if (link.href === "") {
+    document.querySelectorAll("#id-navbar a")[0].classList.add("selected")
+    console.log(link);
+  }
+  else if (link.href.includes(`${menuIconPath}`)) {
+    //console.log(link);
     link.classList.add("selected");
     //console.log(link);
   }
