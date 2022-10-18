@@ -74,6 +74,27 @@ body {
   color: orange;
 }
 
+/* Toggle decorative icon to reveal personal info */
+.personal {
+    display: none;
+}
+.personal.personal-active {
+    position: sticky;
+    top: 3.5rem;
+    margin-left: 5%;
+    display: inline-block;
+    padding: 3rem ;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    z-index: 21;
+    background-color: #C98474; /*
+    display: none; */
+}
+.personal:hover {
+    background-color: aliceblue;
+}
+
 /* ################## */
 .navbar {
   grid-area: 1 / 2 / 2 / 4;
